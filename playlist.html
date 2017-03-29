@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Music app</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="playlist.css">
+
+    <!-- <script type="text/javascript" src="music-data.js"></script> -->
+    <script src ="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    </script>
+
+  </head>
+
+    <body>
+      <header>
+	  <div class= "headBar">
+        <nav>
+          <ul class="nav nav-tabs">
+           <li ><a   id="tagSongs"><span  class="glyphicon glyphicon-music" ></span><p class="head">Library</p></a></li>
+            <li ><a  id="tagPlaylists"><span class="glyphicon glyphicon-th-list" ></span><p class="head">Playlists</p></a></li>
+            <li ><a  id="tagSearch"><span class="glyphicon glyphicon-search" ></span><p class="head">Search</p></a></li>
+          </ul>
+        </nav>
+		</div>
+      </header>
+
+	<div class="container" id="playlists">
+        <button type="button"  id="buttonPlaylist"><span class="glyphicon glyphicon-plus" >
+          </span>Playlists
+        </button>
+        <div class="playlists" id="playlists_inside">
+
+              <!-- write in js -->
+      </div>
+	</div>
+  <div  class="container" id="library" >
+
+        <div class="row">
+            <div class="col-xs-6">
+                <button type="button" id="sortByArtists" ><span class="glyphicon glyphicon-plus" >
+                  </span>Sort by artists
+                </button>
+            </div>
+            <div class="col-xs-6">
+                <button type="button" id="sortByTitle" ><span class="glyphicon glyphicon-plus" >
+                  </span>Sort by title
+                </button>
+              </div>
+            </div>
+<div class="playlists" id="songs_inside">
+
+
+	</div>
+</div>
+  <div  class="container" id="search" >
+    <input type="text" name="search" id="searchinput" placeholder="Search" >
+
+  <div  class="playlists" id="search_inside">
+
+	</div>
+  </div>
+
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div class="modalList" id="modalList">
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div id="myModalForPlaylist" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close2">&times;</span>
+
+      <div class="modalList" id="modalList2">
+          <h4>Add a new playlist</h4>
+          <input type="text" name="newPlaylist" id='submitValue'>
+          <input type ="submit" value="submit" id="submit">
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script type="text/javascript" src="music-app.js"></script>
+  </body>
+</html>
